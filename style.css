@@ -1,0 +1,154 @@
+/* GENERAL PAGE STYLE */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    font-family: 'Arial Black', sans-serif;
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+/* SCREEN SYSTEM */
+.screen {
+    display: none;
+    padding-top: 40px;
+}
+
+.screen.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* TITLES */
+.title {
+    font-size: 60px;
+    color: #ff4df0;
+    text-shadow: 0 0 20px #ff4df0;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+/* ARCADE BUTTONS */
+.arcade-btn {
+    background: #ff4df0;
+    border: none;
+    padding: 20px 50px;
+    margin: 15px;
+    font-size: 28px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff4df0;
+    transition: 0.2s;
+}
+
+.arcade-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ff4df0;
+}
+
+.arcade-btn.small {
+    padding: 12px 30px;
+    font-size: 20px;
+}
+
+.arcade-btn.red {
+    background: #ff3b3b;
+    box-shadow: 0 0 15px #ff3b3b;
+}
+
+.arcade-btn.red:hover {
+    box-shadow: 0 0 25px #ff3b3b;
+}
+
+/* DIFFICULTY BUTTONS */
+.difficulty-container {
+    margin-top: 10px;
+}
+
+.difficulty-btn {
+    background: #00eaff;
+    border: none;
+    padding: 15px 35px;
+    margin: 10px;
+    font-size: 22px;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00eaff;
+    transition: 0.2s;
+}
+
+.difficulty-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00eaff;
+}
+
+/* DOT GRID */
+#dot-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.dot {
+    width: 100px;
+    height: 100px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    box-shadow: 0 0 10px #444;
+    transition: 0.2s;
+}
+
+.dot.active {
+    background: #00ff6a;
+    box-shadow: 0 0 25px #00ff6a;
+    transform: scale(1.15);
+}
+
+/* TIMER + SCORE */
+#timer {
+    font-size: 50px;
+    color: #ffea00;
+    text-shadow: 0 0 15px #ffea00;
+}
+
+#score {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* ACCOUNT CODE BOX */
+#account-code-box {
+    background: #111;
+    padding: 15px;
+    margin: 20px auto;
+    width: 260px;
+    border-radius: 15px;
+    font-size: 22px;
+    box-shadow: 0 0 15px #555;
+}
+
+/* BRAND TEXT */
+.brand {
+    margin-top: 40px;
+    font-size: 20px;
+    color: #888;
+}
