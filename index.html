@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Dot — PZ Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MAIN MENU -->
+    <div id="main-menu" class="screen active">
+        <h1 class="title">THINK DOT</h1>
+
+        <button class="arcade-btn" onclick="startGame()">PLAY</button>
+
+        <h2 class="subtitle">Difficulty</h2>
+        <div class="difficulty-container">
+            <button class="difficulty-btn" onclick="setDifficulty('easy')">Easy</button>
+            <button class="difficulty-btn" onclick="setDifficulty('medium')">Medium</button>
+            <button class="difficulty-btn" onclick="setDifficulty('hard')">Hard</button>
+        </div>
+
+        <button class="arcade-btn small" onclick="showLeaderboard()">Leaderboard</button>
+        <button class="arcade-btn small" onclick="showAccount()">Account Code</button>
+
+        <p class="brand">PZ Games</p>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game-screen" class="screen hidden">
+        <h2 id="timer">60</h2>
+        <h3 id="score">Score: 0</h3>
+
+        <div id="dot-container">
+            <!-- 10 dots (0–9) -->
+            <div class="dot" id="dot0">0</div>
+            <div class="dot" id="dot1">1</div>
+            <div class="dot" id="dot2">2</div>
+            <div class="dot" id="dot3">3</div>
+            <div class="dot" id="dot4">4</div>
+            <div class="dot" id="dot5">5</div>
+            <div class="dot" id="dot6">6</div>
+            <div class="dot" id="dot7">7</div>
+            <div class="dot" id="dot8">8</div>
+            <div class="dot" id="dot9">9</div>
+        </div>
+
+        <button class="arcade-btn small" onclick="returnToMenu()">Exit</button>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div id="leaderboard-screen" class="screen hidden">
+        <h1 class="title">Leaderboard</h1>
+        <div id="leaderboard-list">
+            <!-- Filled by JS -->
+        </div>
+        <button class="arcade-btn small" onclick="returnToMenu()">Back</button>
+    </div>
+
+    <!-- ACCOUNT CODE PANEL -->
+    <div id="account-screen" class="screen hidden">
+        <h1 class="title">Account Code</h1>
+
+        <p>Your Code:</p>
+        <div id="account-code-box">Loading...</div>
+
+        <button class="arcade-btn small" onclick="copyCode()">Copy Code</button>
+
+        <h3>Enter Existing Code</h3>
+        <input id="code-input" type="text" placeholder="Enter code...">
+        <button class="arcade-btn small" onclick="loadCode()">Load Code</button>
+
+        <button class="arcade-btn small red" onclick="deleteCode()">Delete Code</button>
+
+        <button class="arcade-btn small" onclick="returnToMenu()">Back</button>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="firebase.js"></script>
+</body>
+</html>
